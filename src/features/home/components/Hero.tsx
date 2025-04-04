@@ -1,13 +1,13 @@
 import { SearchEstablishment } from "@/components/SearchEstablishment";
-import MaxWidthWrapper from "@/components/shared/MaxWidthWrapper";
 import { MasonryGrid } from "./MasonryGrid";
+import { Establishments } from "./Establishments";
 
 export function Hero() {
   return (
-    <section className="bg-blue min-h-dvh">
-      <MaxWidthWrapper className="py-16 flex flex-col gap-12">
+    <section className="bg-blue min-h-dvh  flex flex-col ">
+      <div className="flex flex-col py-16 gap-12 w-[80%] mx-auto">
         <div className="flex items-center justify-between gap-2">
-          <h1 className="font-montserrat font-extrabold text-6xl text-white">
+          <h1 className="max-w-lg font-montserrat font-extrabold text-7xl text-white">
             Você está morrendo de fome?
           </h1>
 
@@ -15,7 +15,8 @@ export function Hero() {
         </div>
         {/* <FoodGrid /> */}
         <MasonryGrid />
-      </MaxWidthWrapper>
+        <Establishments />
+      </div>
     </section>
   );
 }

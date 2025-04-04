@@ -4,8 +4,8 @@ import { HeaderActions } from "./HeaderActions";
 
 export function Header() {
   return (
-    <header className="h-20 bg-blue-dark w-full flex items-center justify-between relative">
-      <nav className="py-4 px-8">
+    <header className="sticky top-0 z-[9999] h-20 bg-blue-dark w-full flex items-center justify-between">
+      <nav className="py-4 pr-8 pl-[10%]">
         <ul className="flex items-center gap-4 text-white font-semibold">
           <li>
             <Link href="#">Home</Link>

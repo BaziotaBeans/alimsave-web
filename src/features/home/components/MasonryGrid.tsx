@@ -78,6 +78,21 @@ export function MasonryGrid() {
         />
       </svg>
 
+      <svg
+        width="91"
+        height="182"
+        viewBox="0 0 91 182"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="absolute -bottom-20 -right-0 pointer-events-none"
+      >
+        <path
+          d="M76.1816 180.807C105.681 138.807 51.4972 121.538 41.6815 117.307C12.6814 104.807 1.9606 124.459 1.68162 127.807C-0.818604 157.807 55.1235 134.716 60.1814 132.307C85.1814 120.396 108.518 97.5202 41.6815 61.3069C-25.1549 25.0936 90.6813 1.80643 90.6813 1.80643"
+          stroke="#E7FFCE"
+          strokeWidth="3"
+        />
+      </svg>
+
       {isMobile ? (
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 relative z-10">
           <Image

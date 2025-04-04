@@ -48,8 +48,8 @@ export function EstablishmentCarousel() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="bg-red-600 text-blue-950 border-none hover:bg-yellow-400 hover:text-blue-950" />
-      <CarouselNext className="bg-yellow-300 text-blue-950 border-none hover:bg-yellow-400 hover:text-blue-950" />
+      <CarouselPrevious className="establishment-carouse-btn establishment-carouse-btn-previous" />
+      <CarouselNext className="establishment-carouse-btn establishment-carouse-btn-next" />
     </Carousel>
   );
 }

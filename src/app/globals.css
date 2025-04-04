@@ -136,3 +136,15 @@
 .hero-heading {
   @apply text-6xl text-white text-balance font-montserrat font-extrabold;
 }
+
+.establishment-carouse-btn {
+  @apply bg-yellow rounded-[6px] flex items-center justify-center text-blue cursor-pointer shadow-md;
+}
+
+.establishment-carouse-btn-previous {
+  @apply -left-4;
+}
+
+.establishment-carouse-btn-next {
+  @apply -right-4;
+}

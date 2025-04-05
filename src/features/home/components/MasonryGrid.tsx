@@ -177,6 +177,7 @@ export function MasonryGrid() {
                 height={240}
                 alt="Food image"
                 className=" w-full h-full object-cover rounded-lg"
+                quality={100}
               />
             </div>
             <div className="aspect-square w-full">
@@ -186,6 +187,7 @@ export function MasonryGrid() {
                 height={180}
                 alt="Food image"
                 className="w-full h-full object-cover rounded-lg"
+                quality={100}
               />
             </div>
           </div>
@@ -199,6 +201,7 @@ export function MasonryGrid() {
                 height={180}
                 alt="Food image"
                 className="w-full h-full object-cover rounded-lg"
+                quality={100}
               />
             </div>
 
@@ -209,6 +212,7 @@ export function MasonryGrid() {
                 height={240}
                 alt="Food image"
                 className="w-full h-full object-cover rounded-lg"
+                quality={100}
               />
             </div>
           </div>
@@ -222,6 +226,7 @@ export function MasonryGrid() {
                 height={240}
                 alt="Food image"
                 className="w-full h-full object-cover rounded-lg"
+                quality={100}
               />
             </div>
             <div className=" w-full">
@@ -231,6 +236,7 @@ export function MasonryGrid() {
                 height={225}
                 alt="Food image"
                 className="w-full h-full object-cover rounded-lg"
+                quality={100}
               />
             </div>
           </div>
@@ -244,6 +250,7 @@ export function MasonryGrid() {
                 height={240}
                 alt="Food image"
                 className="w-full h-full object-cover rounded-lg"
+                quality={100}
               />
             </div>
             <div className="aspect-square w-full">
@@ -253,6 +260,7 @@ export function MasonryGrid() {
                 height={180}
                 alt="Food image"
                 className="w-full h-full object-cover rounded-lg"
+                quality={100}
               />
             </div>
           </div>
@@ -266,6 +274,7 @@ export function MasonryGrid() {
                 height={180}
                 alt="Food image"
                 className="w-full h-full object-cover rounded-lg"
+                quality={100}
               />
             </div>
             <div className="aspect-[4/5] w-full">
@@ -275,6 +284,7 @@ export function MasonryGrid() {
                 height={225}
                 alt="Food image"
                 className="w-full h-full object-cover rounded-lg"
+                quality={100}
               />
             </div>
           </div>

@@ -17,12 +17,12 @@ const raleway = Raleway({
   subsets: ["latin"],
 });
 
-export const montserrat = Montserrat({
+const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
 });
 
-export const poppins = Poppins({
+const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],

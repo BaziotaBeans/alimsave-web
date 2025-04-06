@@ -2,6 +2,21 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
+
+// Animação sequencial para cada item
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.1,
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  }),
+};
 
 export function MasonryGrid() {
   const [isMobile, setIsMobile] = useState(false);
@@ -18,6 +33,19 @@ export function MasonryGrid() {
       window.removeEventListener("resize", checkIfMobile);
     };
   }, []);
+
+  const mobileImages = [
+    "/images/grid/img-1.png",
+    "/images/grid/img-2.png",
+    "/images/grid/img-3.png",
+    "/images/grid/img-4.png",
+    "/images/grid/img-5.png",
+    "/images/grid/img-6.png",
+    "/images/grid/img-7.png",
+    "/images/grid/img-8.png",
+    "/images/grid/img-9.png",
+    "/images/grid/img-10.png",
+  ];
 
   return (
     <div className="relative w-full h-full rounded-xl">
@@ -94,203 +122,147 @@ export function MasonryGrid() {
       </svg>
 
       {isMobile ? (
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 relative z-10">
-          <Image
-            src="/images/grid/img-1.png"
-            width={200}
-            height={200}
-            alt="Food image"
-            className="w-full rounded-lg"
-          />
-          <Image
-            src="/images/grid/img-2.png"
-            width={200}
-            height={200}
-            alt="Food image"
-            className="w-full rounded-lg"
-          />
-          <Image
-            src="/images/grid/img-3.png"
-            width={200}
-            height={200}
-            alt="Food image"
-            className="w-full rounded-lg"
-          />
-          <Image
-            src="/images/grid/img-4.png"
-            width={200}
-            height={200}
-            alt="Food image"
-            className="w-full rounded-lg"
-          />
-          <Image
-            src="/images/grid/img-5.png"
-            width={200}
-            height={200}
-            alt="Food image"
-            className="w-full rounded-lg"
-          />
-          <Image
-            src="/images/grid/img-6.png"
-            width={200}
-            height={200}
-            alt="Food image"
-            className="w-full rounded-lg"
-          />
-          <Image
-            src="/images/grid/img-7.png"
-            width={200}
-            height={200}
-            alt="Food image"
-            className="w-full rounded-lg"
-          />
-          <Image
-            src="/images/grid/img-8.png"
-            width={200}
-            height={200}
-            alt="Food image"
-            className="w-full rounded-lg"
-          />
-          <Image
-            src="/images/grid/img-9.png"
-            width={200}
-            height={200}
-            alt="Food image"
-            className="w-full rounded-lg"
-          />
-          <Image
-            src="/images/grid/img-10.png"
-            width={200}
-            height={200}
-            alt="Food image"
-            className="w-full rounded-lg"
-          />
+        <div
+          //className="grid grid-cols-2 sm:grid-cols-3 gap-3 relative z-10"
+          className="grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-3 gap-3 relative z-10"
+        >
+          {mobileImages.map((src, index) => (
+            <motion.div
+              key={src}
+              variants={itemVariants}
+              initial="hidden"
+              animate="visible"
+              custom={index}
+            >
+              <Image
+                src={src}
+                width={200}
+                height={200}
+                alt="Food image"
+                className="w-full h-full rounded-lg object-cover"
+              />
+            </motion.div>
+          ))}
         </div>
       ) : (
         <div className="grid grid-cols-5 gap-3 relative z-10">
           {/* Coluna 1 */}
           <div className="mt-8 flex flex-col gap-3">
-            <div className="w-full">
-              <Image
-                src="/images/grid/img-1.png"
-                width={380}
-                height={240}
-                alt="Food image"
-                className=" w-full h-full object-cover rounded-lg"
-                quality={100}
-              />
-            </div>
-            <div className="aspect-square w-full">
-              <Image
-                src="/images/grid/img-3.png"
-                width={180}
-                height={180}
-                alt="Food image"
-                className="w-full h-full object-cover rounded-lg"
-                quality={100}
-              />
-            </div>
+            {[
+              { src: "img-1", aspect: "default" },
+              { src: "img-3", aspect: "square" },
+            ].map((img, i) => (
+              <motion.div
+                key={img.src}
+                variants={itemVariants}
+                initial="hidden"
+                animate="visible"
+                custom={i}
+              >
+                <Image
+                  src={`/images/grid/${img.src}.png`}
+                  width={380}
+                  height={240}
+                  alt="Food image"
+                  className={`w-full h-full object-cover rounded-lg ${img.aspect === "square" ? "aspect-square" : ""}`}
+                  quality={100}
+                />
+              </motion.div>
+            ))}
           </div>
 
           {/* Coluna 2 */}
           <div className="flex flex-col gap-3">
-            <div className="aspect-square w-full">
-              <Image
-                src="/images/grid/img-2.png"
-                width={180}
-                height={180}
-                alt="Food image"
-                className="w-full h-full object-cover rounded-lg"
-                quality={100}
-              />
-            </div>
-
-            <div className="aspect-[3/4] w-full">
-              <Image
-                src="/images/grid/img-6.png"
-                width={180}
-                height={240}
-                alt="Food image"
-                className="w-full h-full object-cover rounded-lg"
-                quality={100}
-              />
-            </div>
+            {[
+              { src: "img-2", aspect: "square" },
+              { src: "img-6", aspect: "[3/4]" },
+            ].map((img, i) => (
+              <motion.div
+                key={img.src}
+                variants={itemVariants}
+                initial="hidden"
+                animate="visible"
+                custom={i + 2}
+              >
+                <Image
+                  src={`/images/grid/${img.src}.png`}
+                  width={180}
+                  height={240}
+                  alt="Food image"
+                  className={`w-full h-full object-cover rounded-lg aspect-${img.aspect}`}
+                  quality={100}
+                />
+              </motion.div>
+            ))}
           </div>
 
           {/* Coluna 3 */}
           <div className="flex flex-col gap-3 mt-22">
-            <div className="aspect-[3/4] w-full">
-              <Image
-                src="/images/grid/img-4.png"
-                width={180}
-                height={240}
-                alt="Food image"
-                className="w-full h-full object-cover rounded-lg"
-                quality={100}
-              />
-            </div>
-            <div className=" w-full">
-              <Image
-                src="/images/grid/img-5.png"
-                width={180}
-                height={225}
-                alt="Food image"
-                className="w-full h-full object-cover rounded-lg"
-                quality={100}
-              />
-            </div>
+            {["img-4", "img-5"].map((src, i) => (
+              <motion.div
+                key={src}
+                variants={itemVariants}
+                initial="hidden"
+                animate="visible"
+                custom={i + 4}
+              >
+                <Image
+                  src={`/images/grid/${src}.png`}
+                  width={180}
+                  height={225}
+                  alt="Food image"
+                  className="w-full h-full object-cover rounded-lg"
+                  quality={100}
+                />
+              </motion.div>
+            ))}
           </div>
 
           {/* Coluna 4 */}
           <div className="flex flex-col gap-3 mt-8">
-            <div className="aspect-[3/4] w-full">
-              <Image
-                src="/images/grid/img-7.png"
-                width={180}
-                height={240}
-                alt="Food image"
-                className="w-full h-full object-cover rounded-lg"
-                quality={100}
-              />
-            </div>
-            <div className="aspect-square w-full">
-              <Image
-                src="/images/grid/img-8.png"
-                width={180}
-                height={180}
-                alt="Food image"
-                className="w-full h-full object-cover rounded-lg"
-                quality={100}
-              />
-            </div>
+            {["img-7", "img-8"].map((src, i) => (
+              <motion.div
+                key={src}
+                variants={itemVariants}
+                initial="hidden"
+                animate="visible"
+                custom={i + 6}
+              >
+                <Image
+                  src={`/images/grid/${src}.png`}
+                  width={180}
+                  height={180}
+                  alt="Food image"
+                  className="w-full h-full object-cover rounded-lg"
+                  quality={100}
+                />
+              </motion.div>
+            ))}
           </div>
 
           {/* Coluna 5 */}
           <div className="flex flex-col gap-3 mt-16">
-            <div className="aspect-square w-full">
-              <Image
-                src="/images/grid/img-9.png"
-                width={180}
-                height={180}
-                alt="Food image"
-                className="w-full h-full object-cover rounded-lg"
-                quality={100}
-              />
-            </div>
-            <div className="aspect-[4/5] w-full">
-              <Image
-                src="/images/grid/img-10.png"
-                width={180}
-                height={225}
-                alt="Food image"
-                className="w-full h-full object-cover rounded-lg"
-                quality={100}
-              />
-            </div>
+            {["img-9", "img-10"].map((src, i) => (
+              <motion.div
+                key={src}
+                variants={itemVariants}
+                initial="hidden"
+                animate="visible"
+                custom={i + 8}
+              >
+                <Image
+                  src={`/images/grid/${src}.png`}
+                  width={180}
+                  height={225}
+                  alt="Food image"
+                  className="w-full h-full object-cover rounded-lg"
+                  quality={100}
+                />
+              </motion.div>
+            ))}
           </div>
         </div>
       )}
-      {/* Masonry grid */}
     </div>
   );
 }

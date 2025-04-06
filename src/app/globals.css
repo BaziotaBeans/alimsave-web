@@ -138,7 +138,7 @@
 }
 
 .establishment-carouse-btn {
-  @apply bg-yellow rounded-[6px] flex items-center justify-center text-blue cursor-pointer shadow-md;
+  @apply bg-yellow rounded-[6px] hidden items-center justify-center text-blue cursor-pointer shadow-md sm:flex;
 }
 
 .establishment-carouse-btn-previous {
@@ -147,4 +147,52 @@
 
 .establishment-carouse-btn-next {
   @apply -right-4;
+}
+
+@keyframes cartPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 253, 200, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 253, 200, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 253, 200, 0);
+  }
+}
+
+.cart-pulse-animation {
+  animation: cartPulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+/* Cart floating button animation */
+.cart-float-button {
+  animation: floatButton 3s infinite ease-in-out;
+}
+
+@keyframes floatButton {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Cart badge animation */
+.cart-badge {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

@@ -8,7 +8,7 @@ import { SurpriseBags } from "@/features/home/components/SurpriseBags";
 
 export default function Home() {
   return (
-    <main className="flex flex-col">
+    <main className="flex flex-col ">
       <Header />
       <Hero />
       <About />

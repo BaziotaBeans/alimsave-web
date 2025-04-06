@@ -10,7 +10,7 @@ export function SurpriseBagCard() {
         alt="surprise bag"
         width={132}
         height={132}
-        className="object-cover max-w-[132px] w-full h-full"
+        className="object-cover max-w-[132px] w-full h-full pointer-events-none"
         quality={100}
       />
 

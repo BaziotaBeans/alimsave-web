@@ -40,7 +40,13 @@ export function EstablishmentCard({
       </div>
 
       <div className="relative w-[110px] h-[110px] rounded-full border-4 border-zinc-100 overflow-hidden">
-        <Image src={image} alt="" width={100} height={100} className="object-cover w-full h-full" />
+        <Image
+          src={image}
+          alt=""
+          width={100}
+          height={100}
+          className="object-cover w-full h-full pointer-events-none"
+        />
       </div>
 
       <CardContent className="flex flex-col gap-4 items-center p-0">

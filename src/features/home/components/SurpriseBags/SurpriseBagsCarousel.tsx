@@ -21,7 +21,7 @@ export function SurpriseBagsCarousel() {
       <CarouselContent className="-ml-2 md:-ml-4">
         {Array.from({ length: 6 }).map((_, index) => {
           return (
-            <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-auto">
+            <CarouselItem key={index} className="pl-2 md:pl-4 basis-[70%] sm:basis-auto">
               <SurpriseBagCard />
             </CarouselItem>
           );

@@ -35,7 +35,11 @@ export function EstablishmentCarousel() {
     >
       <CarouselContent className="-ml-2 md:-ml-4">
         {items.map((item, index) => (
-          <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-auto">
+          <CarouselItem
+            key={index}
+            //className="pl-2 md:pl-4 md:basis-auto"
+            className="pl-2 md:pl-4 basis-[70%] sm:basis-auto"
+          >
             <EstablishmentCard
               name={item.name}
               category={item.category}

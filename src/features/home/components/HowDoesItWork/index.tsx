@@ -23,19 +23,21 @@ export function HowDoesItWord() {
   };
 
   return (
-    <div className="bg-orange flex flex-col relative overflow-hidden">
-      <div className="flex flex-col py-16 gap-4 w-[80%] mx-auto">
-        <h1 className="text-5xl font-montserrat font-extrabold  text-white">Como funciona?</h1>
+    <div className="bg-orange flex flex-col relative overflow-hidden px-4 md:px-0">
+      <div className="flex flex-col py-12 md:py-16 gap-6 md:gap-4 w-full md:w-[80%] mx-auto relative z-10">
+        <h1 className="text-3xl md:text-5xl font-montserrat font-extrabold text-white text-center md:text-left">
+          Como funciona?
+        </h1>
 
         {/* Numbered buttons */}
-        <div className="flex space-x-4 mb-8">
+        <div className="flex flex-wrap gap-3 md:gap-4 justify-center md:justify-start mb-6">
           {[1, 2, 3, 4].map((num) => (
             <button
               key={num}
               onClick={() => handleSlideChange(num)}
-              className={`w-[72px] h-10 rounded-full  flex items-center justify-center font-bold transition-colors duration-300 ${
+              className={`w-10 h-10 md:w-[72px] rounded-full cursor-pointer flex items-center justify-center font-bold transition-colors duration-300 ${
                 activeSlide === num
-                  ? "bg-white text-orang border-2 border-white text-orange"
+                  ? "bg-white text-orange border-2 border-white"
                   : "bg-transparent text-white border-2 border-[#F6A170]"
               }`}
             >
@@ -56,12 +58,12 @@ export function HowDoesItWord() {
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -50 }}
                     transition={{ duration: 0.4 }}
-                    className="max-w-xl"
+                    className="max-w-full md:max-w-xl text-center md:text-left"
                   >
-                    <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">
+                    <h3 className="text-xl md:text-3xl font-bold mb-3 md:mb-4 text-white">
                       {slide.title}
                     </h3>
-                    <p className="text-lg md:text-xl text-white">{slide.content}</p>
+                    <p className="text-base md:text-xl text-white">{slide.content}</p>
                   </motion.div>
                 ),
             )}
@@ -69,15 +71,18 @@ export function HowDoesItWord() {
         </div>
 
         {/* Dots indicator */}
-        <div className="flex items-center space-x-2 mt-8">
+        <div className="flex items-center justify-center md:justify-start space-x-2 mt-6">
           {[1, 2, 3, 4].map((num) => (
             <button
               key={`dot-${num}`}
               onClick={() => handleSlideChange(num)}
-              className="focus:outline-none"
+              className="focus:outline-none cursor-pointer"
             >
               {num === activeSlide ? (
-                <motion.div className="w-12 h-2 bg-white rounded-full" layoutId="activeDot" />
+                <motion.div
+                  className="w-8 md:w-12 h-2 bg-white rounded-full"
+                  layoutId="activeDot"
+                />
               ) : (
                 <div className="w-2 h-2 bg-white rounded-full opacity-70" />
               )}
@@ -91,7 +96,7 @@ export function HowDoesItWord() {
         alt="illustration food"
         width={506}
         height={506}
-        className="object-center w-full max-w-[400px] pointer-events-none absolute right-0"
+        className="w-64 md:w-[400px] pointer-events-none absolute right-0 bottom-0 md:bottom-auto opacity-10 sm:opacity-50"
         quality={100}
       />
     </div>

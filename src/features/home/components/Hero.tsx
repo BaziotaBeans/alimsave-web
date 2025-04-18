@@ -4,7 +4,7 @@ import { Establishments } from "./Establishments";
 
 export function Hero() {
   return (
-    <section className="bg-blue min-h-dvh flex flex-col overflow-hidden">
+    <section className="bg-green min-h-dvh flex flex-col overflow-hidden">
       <div className="flex flex-col py-16 gap-12 md:w-[80%] w-full mx-auto md:px-0 px-2">
         <div
           //className="flex items-center justify-between gap-2"

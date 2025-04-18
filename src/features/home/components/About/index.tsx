@@ -20,7 +20,7 @@ export function About() {
           <div className="flex flex-col space-y-6 text-center lg:text-left">
             <div className="space-y-2">
               <h3 className="text-orange font-montserrat font-extrabold text-xl">APRESENTAMOS</h3>
-              <h1 className="text-blue text-4xl sm:text-5xl font-montserrat font-extrabold">
+              <h1 className="text-green text-4xl sm:text-5xl font-montserrat font-extrabold">
                 Surprise Bag
               </h1>
             </div>

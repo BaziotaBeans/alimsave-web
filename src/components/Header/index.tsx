@@ -35,7 +35,7 @@ export function Header() {
   return (
     <header
       className={`sticky top-0 left- z-[9999] w-full h-20 flex items-center justify-between transition-all duration-300 ${
-        isScrolled ? "bg-blue-dark shadow-lg" : "bg-blue-dark"
+        isScrolled ? "bg-green-dark shadow-lg" : "bg-green"
       }`}
     >
       <button
@@ -71,7 +71,7 @@ export function Header() {
       </nav>
 
       <div
-        className={`fixed inset-0 bg-blue-dark z-[9999] pt-20 transition-transform duration-300 ease-in-out ${
+        className={`fixed inset-0 bg-green z-[9999] pt-20 transition-transform duration-300 ease-in-out ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         } lg:hidden`}
       >
@@ -105,7 +105,7 @@ export function Header() {
           </li>
           <li className="mt-6">
             <button
-              className="bg-blue-darker px-8 py-3 rounded-md text-white font-bold cursor-pointer transition-all hover:bg-opacity-80"
+              className="bg-green-dark px-8 py-3 rounded-md text-white font-bold cursor-pointer transition-all hover:bg-opacity-80"
               onClick={closeMenu}
             >
               Entrar

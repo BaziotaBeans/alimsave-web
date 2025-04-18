@@ -23,9 +23,9 @@ export function HowDoesItWord() {
   };
 
   return (
-    <div className="bg-orange flex flex-col relative overflow-hidden px-4 md:px-0">
+    <div className="border-t-8 border-t-green bg-green-light flex flex-col relative overflow-hidden py-8 px-4 md:px-0">
       <div className="flex flex-col py-12 md:py-16 gap-6 md:gap-4 w-full md:w-[80%] mx-auto relative z-10">
-        <h1 className="text-3xl md:text-5xl font-montserrat font-extrabold text-white text-center md:text-left">
+        <h1 className="text-3xl md:text-5xl font-montserrat font-extrabold text-green text-center md:text-left">
           Como funciona?
         </h1>
 
@@ -37,8 +37,8 @@ export function HowDoesItWord() {
               onClick={() => handleSlideChange(num)}
               className={`w-10 h-10 md:w-[72px] rounded-full cursor-pointer flex items-center justify-center font-bold transition-colors duration-300 ${
                 activeSlide === num
-                  ? "bg-white text-orange border-2 border-white"
-                  : "bg-transparent text-white border-2 border-[#F6A170]"
+                  ? "bg-transparent text-green border-3 border-green"
+                  : "bg-transparent text-green border-3 border-green/30"
               }`}
             >
               {num}
@@ -60,10 +60,10 @@ export function HowDoesItWord() {
                     transition={{ duration: 0.4 }}
                     className="max-w-full md:max-w-xl text-center md:text-left"
                   >
-                    <h3 className="text-xl md:text-3xl font-bold mb-3 md:mb-4 text-white">
+                    <h3 className="text-xl md:text-3xl font-bold mb-3 md:mb-4 text-green">
                       {slide.title}
                     </h3>
-                    <p className="text-base md:text-xl text-white">{slide.content}</p>
+                    <p className="text-base md:text-xl text-green">{slide.content}</p>
                   </motion.div>
                 ),
             )}
@@ -80,11 +80,11 @@ export function HowDoesItWord() {
             >
               {num === activeSlide ? (
                 <motion.div
-                  className="w-8 md:w-12 h-2 bg-white rounded-full"
+                  className="w-8 md:w-12 h-2 bg-green rounded-full"
                   layoutId="activeDot"
                 />
               ) : (
-                <div className="w-2 h-2 bg-white rounded-full opacity-70" />
+                <div className="w-2 h-2 bg-green rounded-full opacity-70" />
               )}
             </button>
           ))}

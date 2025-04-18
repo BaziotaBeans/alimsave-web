@@ -47,6 +47,10 @@
   --color-blue: var(--app-color-blue);
   --color-orange: var(--app-color-orange);
   --color-yellow: var(--app-color-yellow);
+
+  --color-green-dark: var(--app-color-green-dark);
+  --color-green: var(--app-color-green);
+  --color-green-light: var(--app-color-green-light);
 }
 
 :root {
@@ -86,8 +90,13 @@
   --app-color-blue-darker: #00188d;
   --app-color-blue-dark: #011eaa;
   --app-color-blue: #0023c4;
-  --app-color-orange: #f17228;
+  /* --app-color-orange: #f17228; */
   --app-color-yellow: #fff500;
+
+  --app-color-green: #185330;
+  --app-color-green-dark: #16492b;
+  --app-color-green-light: #d8ee77;
+  --app-color-orange: #f88b41;
 }
 
 .dark {
@@ -138,7 +147,7 @@
 }
 
 .establishment-carouse-btn {
-  @apply bg-yellow rounded-[6px] hidden items-center justify-center text-blue cursor-pointer shadow-md sm:flex;
+  @apply bg-green-light text-green rounded-[6px] hidden items-center justify-center cursor-pointer shadow-md sm:flex;
 }
 
 .establishment-carouse-btn-previous {

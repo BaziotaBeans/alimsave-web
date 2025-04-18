@@ -23,7 +23,7 @@ export function SurpriseBagCard() {
       <CardFooter className="flex items-center justify-between w-full px-4">
         <h1 className="text-xl font-bold text-orange">1.200,00 kz</h1>
 
-        <button className="bg-blue text-white p-1 rounded-[4px] cursor-pointer hover:bg-blue-dark transition-all">
+        <button className="bg-green text-white p-1 rounded-[4px] cursor-pointer hover:bg-blue-dark transition-all">
           <Plus className="w-6 h-6" />
         </button>
       </CardFooter>

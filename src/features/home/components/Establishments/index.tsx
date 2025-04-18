@@ -11,7 +11,7 @@ export function Establishments() {
         className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-2 sm:gap-4"
       >
         <div className="flex flex-col space-y-2">
-          <span className="bg-yellow text-xs py-1 px-2 rounded-[4px] font-medium text-blue self-start">
+          <span className="bg-green-light text-xs py-1 px-2 rounded-[4px] font-medium text-green self-start">
             TODOS ESTABELECIMENTOS ONLINE{" "}
           </span>
           <h1
@@ -28,7 +28,10 @@ export function Establishments() {
           </p>
         </div>
 
-        <Link className="font-montserrat font-medium text-sm text-white" href="">
+        <Link
+          className="font-montserrat font-medium text-sm text-white transition-all hover:underline"
+          href=""
+        >
           Ver Tudo
         </Link>
       </div>

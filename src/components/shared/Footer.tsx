@@ -18,11 +18,11 @@ export function Footer() {
                 <input
                   type="email"
                   placeholder="Teu endereço email, por favor"
-                  className="flex-1 px-6 py-6 text-base sm:text-lg text-blue font-bold bg-transparent border-none focus:outline-none w-full"
+                  className="flex-1 px-6 py-6 text-base sm:text-lg text-green font-bold bg-transparent border-none focus:outline-none w-full"
                 />
                 <button
                   type="submit"
-                  className="text-base sm:text-xl mt-2 md:mt-0 w-full md:w-auto p-2 md:px-8 md:py-6 bg-blue hover:bg-blue-dark text-white cursor-pointer font-bold font-montserrat rounded-[20px] md:rounded-full transition-colors"
+                  className="text-base sm:text-xl mt-2 md:mt-0 w-full md:w-auto p-2 md:px-8 md:py-6 bg-green hover:bg-green-dark text-white cursor-pointer font-bold font-montserrat rounded-[20px] md:rounded-full transition-colors"
                 >
                   Inscreva-me!
                 </button>
@@ -58,28 +58,28 @@ export function Footer() {
         <div className="flex flex-col pt-16 gap-20 md:gap-4 w-[80%] mx-auto justify-between md:min-h-[95vh]">
           <ul className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0">
             <li>
-              <Link className="text-sm text-blue transition-all hover:text-blue-dark" href="">
+              <Link className="text-sm text-green transition-all hover:text-green-dark" href="">
                 Politicas de Privacidade
               </Link>
             </li>
             <li>
-              <Link className="text-sm text-blue transition-all hover:text-blue-dark" href="">
+              <Link className="text-sm text-green transition-all hover:text-green-dark" href="">
                 Politicas de Cookie
               </Link>
             </li>
             <li>
-              <Link className="text-sm text-blue transition-all hover:text-blue-dark" href="">
+              <Link className="text-sm text-green transition-all hover:text-green-dark" href="">
                 Termos & Condições
               </Link>
             </li>
             <li>
-              <Link className="text-sm text-blue transition-all hover:text-blue-dark" href="">
+              <Link className="text-sm text-green transition-all hover:text-green-dark" href="">
                 Fontes de desperdício de alimentos
               </Link>
             </li>
           </ul>
 
-          <h1 className="text-xl sm:text-2xl font-extrabold font-montserrat text-blue text-center">
+          <h1 className="text-xl sm:text-2xl font-extrabold font-montserrat text-green text-center">
             © AlimSave Inc. 2025. Todos os direitos reservados.
           </h1>
 

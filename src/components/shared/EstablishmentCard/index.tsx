@@ -29,7 +29,7 @@ export function EstablishmentCard({
   console.log(rating);
 
   return (
-    <Card className="flex flex-col items-center w-[245px] bg-white rounded-[10px] px-4 pt-4 pb-8">
+    <Card className="flex flex-col items-center w-[245px] bg-white rounded-[10px] px-4 pt-4 pb-8 select-none">
       <div className="flex items-center justify-between w-full">
         <button className="text-zinc-400 cursor-pointer">
           <MdRemoveRedEye className="w-6 h-6" />

@@ -37,7 +37,7 @@ export function FrequentlyAskedQuestions() {
   };
 
   return (
-    <div className="relative bg-blue flex flex-col px-3 sm:px-4">
+    <div className="border-t-8 border-t-white relative bg-green flex flex-col px-3 sm:px-4">
       <div className="flex flex-col py-12 gap-6 w-full md:w-[80%] mx-auto">
         <h1 className="text-white text-3xl md:text-5xl font-montserrat font-extrabold mb-6 text-center md:text-left">
           Perguntas frequentes
@@ -78,7 +78,7 @@ export function FrequentlyAskedQuestions() {
             <AccordionItem key={item.id} value={item.id} className="border-0">
               <div className="bg-white rounded-lg">
                 <AccordionTrigger
-                  className="cursor-pointer p-6 md:p-8 text-blue text-xl md:text-3xl font-medium hover:no-underline grid grid-cols-[1fr_auto] items-center justify-between w-full"
+                  className="cursor-pointer p-6 md:p-8 text-green text-xl md:text-3xl font-medium hover:no-underline grid grid-cols-[1fr_auto] items-center justify-between w-full"
                   hideDefaultIcon
                 >
                   <span className="text-left font-extrabold text-base sm:text-xl">
@@ -90,7 +90,7 @@ export function FrequentlyAskedQuestions() {
                     <Plus className="w-6 h-6 md:w-8 md:h-8" strokeWidth={2.2} />
                   )}
                 </AccordionTrigger>
-                <AccordionContent className="px-4 md:px-6 pb-4 text-blue text-sm sm:text-base md:text-lg">
+                <AccordionContent className="px-4 md:px-6 pb-4 text-green text-sm sm:text-base md:text-lg">
                   <p>{item.answer}</p>
                 </AccordionContent>
               </div>

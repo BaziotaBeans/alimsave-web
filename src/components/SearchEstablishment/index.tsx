@@ -194,7 +194,7 @@ export function SearchEstablishment() {
             whileHover={{ backgroundColor: "rgba(0,0,0,0.05)" }}
             whileTap={{ scale: 0.98 }}
             className={cn(
-              "absolute top-0 right-0 text-blue font-semibold w-28 md:w-40 h-full border-l text-sm sm:text-base",
+              "absolute top-0 right-0 text-green font-semibold w-28 md:w-40 h-full border-l text-sm sm:text-base",
               "flex items-center justify-center gap-2 cursor-pointer transition-all",
             )}
           >
@@ -234,7 +234,7 @@ export function SearchEstablishment() {
             className="bg-white rounded-lg p-4 shadow-lg overflow-hidden"
           >
             <div className="flex justify-between items-center mb-3">
-              <h3 className="font-semibold text-blue">Filtros</h3>
+              <h3 className="font-semibold text-green">Filtros</h3>
               <button
                 onClick={() => setIsFilterOpen(false)}
                 className="text-gray-500 hover:text-gray-700"
